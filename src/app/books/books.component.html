@@ -1,11 +1,7 @@
 <p>books works!</p>
 
 <ul  >
-    <ng-container *ngFor="let book of book;">
-        <li  >
-            <img [src]="book.image " [alt]="book.name" class="imagetag" />
-            <p>{{book.name}}</p>
-            {{book.rate|currency:'INR'}}
-        </li>
+    <ng-container *ngFor="let sbook of books;">
+        <app-book [book]="sbook"></app-book>
     </ng-container>
 </ul>

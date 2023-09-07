@@ -7,8 +7,11 @@ ul{
     display: flex;
     flex-wrap: wrap;
 }
-li{
+ul >li{
     list-style: none;
     width: 25%;
     text-align: center;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    
 }

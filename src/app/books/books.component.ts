@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
+import { Book } from '../Types/book';
 
-interface book {
-  name:string;
-  rate:number;
-  image:string;
-}
+
 
 @Component({
   selector: 'app-books',
@@ -16,7 +13,7 @@ export class BooksComponent {
   src:string= ''
   is:boolean=false
 
-  book:book[] = [{name:"this is asweme ",rate:200,image:"/assets/images/PXL_20230218_164053220.jpg"},{ name:" this is cool",rate:200,image:"/assets/images/karan_singh_image.png"}]
+  books:Book[] = [{name:"this is asweme ",rate:200,image:"/assets/images/PXL_20230218_164053220.jpg"},{ name:" this is cool",rate:200,image:"/assets/images/karan_singh_image.png"}]
 
  
   
