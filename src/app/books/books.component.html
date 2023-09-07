@@ -1,1 +1,10 @@
 <p>books works!</p>
+
+<ul  >
+    <li *ngFor="let book of book;let i = index" >
+        {{i+1}}
+        <p>{{book.name}}</p>
+        {{book.rate|currency:'INR'}}
+    </li>
+   
+</ul>
