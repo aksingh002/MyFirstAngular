@@ -1,0 +1,14 @@
+.imagetag{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+li{
+    list-style: none;
+    width: 25%;
+    text-align: center;
+}
