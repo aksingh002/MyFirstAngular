@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Book } from '../Types/book';
+import { BooksService } from './books.service';
 
 
 
@@ -8,13 +9,21 @@ import { Book } from '../Types/book';
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
-export class BooksComponent {
-  name:string = 'karan singh'
-  src:string= ''
-  is:boolean=false
+export class BooksComponent implements OnInit {
 
-  books:Book[] = [{name:"this is asweme ",rate:200,image:"/assets/images/PXL_20230218_164053220.jpg"},{ name:" this is cool",rate:200,image:"/assets/images/karan_singh_image.png"}]
+  books:Book[] = []
+  constructor(private booksservice:BooksService){
 
- 
+  }
   
+
+ngOnInit():void{
+  this.books = this.booksservice.getbooks();
+}
+ 
+
+  cart :Book[]=[]
+  addtocart(event:Book){
+    console.log(this.books)
+  }
 }

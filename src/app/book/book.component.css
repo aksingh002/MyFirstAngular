@@ -3,11 +3,8 @@
     height: 100px;
     object-fit: cover;
 }
-ul{
-    display: flex;
-    flex-wrap: wrap;
-}
-ul >li{
+
+li{
     list-style: none;
     width: 25%;
     text-align: center;

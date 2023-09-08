@@ -2,6 +2,6 @@
 
 <ul  >
     <ng-container *ngFor="let sbook of books;">
-        <app-book [book]="sbook"></app-book>
+        <app-book (emitbook)="addtocart($event)" [book]="sbook"></app-book>
     </ng-container>
 </ul>
