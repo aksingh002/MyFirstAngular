@@ -21,9 +21,4 @@ ngOnInit():void{
   this.books = this.booksservice.getbooks();
 }
  
-
-  cart :Book[]=[]
-  addtocart(event:Book){
-    console.log(this.books)
-  }
 }

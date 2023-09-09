@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Book } from '../Types/book';
+import { Book } from '../../Types/book';
+import { CartService } from 'src/app/Types/cart.service';
 
 @Component({
   selector: 'app-book',
@@ -9,10 +10,11 @@ import { Book } from '../Types/book';
 export class BookComponent {
 @Input() book:Book = {} as Book;
 
-@Output() emitbook = new EventEmitter<Book>();
+// @Output() emitbook = new EventEmitter<Book>();
 
-
+constructor(private Cartservice:CartService){}
   addToCart(){
-    this.emitbook.emit(this.book)
+    this.Cartservice.add(this.book)
+    // this.emitbook.emit(this.book)
   }
 }
